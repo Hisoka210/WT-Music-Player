@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZSW Music Player</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://kit.fontawesome.com/c1cf7d3664.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+angelscript
+
+Copy
+<div class="container">
+    <div class="music-player">
+        <nav class="nav">
+            <div class="circle" onclick="previousSong()">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="circle" onclick="togglePlaylist()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <img id="song-img" src="Songs/Aashir.jpg" class="song-img" alt="Song Thumbnail">
+        <h1 id="song-title">Main Wo Chand Jiska...</h1>
+        <p id="song-artist">Arjit Singh</p>
+
+        <audio controls id="song">
+            <source id="song-source" src="Songs/song1.mp3" type="audio/mpeg">
+        </audio>
+        <input type="range" value="0" id="progress">
+
+        <div class="controls">
+            <div onclick="previousSong()"><i class="fa-solid fa-backward"></i></div>
+            <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div> 
+            <div onclick="nextSong()"><i class="fa-solid fa-forward"></i></div>
+        </div>
+
+        <!-- Playlist -->
+        <div id="playlist" class="playlist">
+            <ul>
+                <!-- Songs will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
